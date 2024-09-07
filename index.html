@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+
     <div class="content">
         <h1>Conversor de unicode</h1>
+        
         <form class="unicode-conversion-form">
             <div class="form-group">
                 <label for="toBeConverted">Texto</label>                
@@ -19,6 +21,17 @@
                 <textarea readonly="true" id="converted"></textarea>
             </div>
         </form>
+        <div class="actions">
+            <button id="btnClear">
+                Limpar
+            </button>
+            <button id="btnCopy">
+                Copiar
+            </button>
+        </div>
+        <div id="alert" class="alert hidden"> 
+            Texto foi copiado
+        </div>
     </div>
     <script src="index.js"></script>
 </body>

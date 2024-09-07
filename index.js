@@ -1,9 +1,16 @@
+var hideAlertTimeout = undefined;
+
 document.querySelector('#toBeConverted').addEventListener('input', e => {
+    hideAlert()
     setConvertedText(e.target.value)
 })
 
 
-
+document.querySelector("#btnCopy").addEventListener('click', copyToClipBoard)
+document.querySelector("#btnClear").addEventListener('click', () =>{
+    document.querySelector("#converted").value = ''
+    document.querySelector('#toBeConverted').value = ''
+})
 
 function setConvertedText(original){
     document.querySelector("#converted").value = convertText(original)
@@ -23,6 +30,25 @@ function convertText(original){
     return converted
 }
 
+function copyToClipBoard() {
+    var copyText = document.querySelector("#converted").value
+      
+    navigator.clipboard.writeText(copyText);
+
+    if(hideAlertTimeout){
+        clearTimeout(hideAlertTimeout)
+    }
+    showAlert()
+    hideAlertTimeout = setTimeout(() => hideAlert(), 5000)
+} 
+
+function showAlert(){
+    document.querySelector("#alert").classList.remove("hidden")
+}
+
+function hideAlert(){
+    document.querySelector("#alert").classList.add("hidden")
+}
 
 
 const characterDictionary ={

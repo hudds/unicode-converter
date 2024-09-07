@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 body{
     font-family: sans-serif;
 }
@@ -29,4 +32,42 @@ body{
 .form-group textarea{
     width: 100%;
     min-height: 300px;
+}
+
+.alert-conatainer{
+    width: 100%;
+}
+
+.alert {
+    text-align: center;
+    width: 100%;
+    border: 1px solid rgb(0, 162, 255);
+    background: rgb(148, 216, 255);
+    border-radius: 5px;
+    margin:10px auto;
+    padding: 10px;
+    opacity: 1 ;
+    transition:all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    visibility:visible;
+    opacity:1;
+    overflow-y: hidden;
+}
+
+.alert.hidden{
+    visibility:hidden;
+    opacity:0;
+    height:0;
+    margin:0;
+    padding: 0;
+}
+
+.actions{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+}
+
+.actions button{
+    flex-grow: 1;
 }
