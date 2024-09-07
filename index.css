@@ -1,0 +1,32 @@
+body{
+    font-family: sans-serif;
+}
+
+.content {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+.unicode-conversion-form{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.unicode-conversion-form .form-group{
+    flex-grow: 1;
+    min-width: 300px;
+}
+
+.form-group{
+    padding: 10px;
+}
+.form-group label{
+    display: block;
+}
+
+.form-group textarea{
+    width: 100%;
+    min-height: 300px;
+}
